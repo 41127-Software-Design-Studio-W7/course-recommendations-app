@@ -95,6 +95,7 @@ form input[type="submit"]:hover {
   transition: 0.4s;
   color: #FFF;
   font-weight: 700;
+  width: 300px;
   cursor: pointer;
 }
 
@@ -103,48 +104,23 @@ form input[type="submit"]:hover {
   background-color: #888;
 }
 
-.formitemheading {
-  font-family: montserrat, sans-serif;
-  font-weight: 640;
-}
-
-.formitemsubheading {
-  font-family: montserrat, sans-serif;
-  font-weight: 480;
-}
-
-.formitemtext {
-  font-family: montserrat, sans-serif;
-  font-weight: 400;
-}
-
-
-.minorbuttonup {
+.largeButton {
   display: inline-block;
   padding: 10px 15px;
   border: none;
   border-radius: 8px;
-  background-color: #ade6fd;
+  background-color: #adfdba;
   background-size: 200%;
   background-position: 0%;
   transition: 0.4s;
   color: #FFF;
   font-weight: 700;
+  width: 300px;
   cursor: pointer;
 }
 
-.minorbuttondown {
-  display: inline-block;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  background-color: #ffadaa;
-  background-size: 200%;
-  background-position: 0%;
-  transition: 0.4s;
-  color: #FFF;
-  font-weight: 700;
-  cursor: pointer;
+.largeButton:hover {
+  background-position: 100% 0%;
+  background-color: #888;
 }
-
 
