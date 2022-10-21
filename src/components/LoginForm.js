@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import ResetPassword from './ResetPassword';
 
-function LoginForm({ Login, error }) {
+function LoginForm({ Login, error, reset }) {
     const [details, setDetails] = useState({email: "", password: ""});
+    const [isShown, setIsShown] = useState(false);
 
     const submitHandler = e => {
         e.preventDefault();
 
         Login(details);
-    }
+    };
+
+    const handleClick = e => {  
+        e.preventDefault();
+        setIsShown(current => !current);
+        console.log(isShown);
+    };
+
 
   return (
     <form onSubmit={submitHandler} >
@@ -21,6 +30,8 @@ function LoginForm({ Login, error }) {
                 <input type="password" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} placeholder="Password"/>
             </div>
             <input type="submit" value="Login"/>
+            <button class='button' onClick={(handleClick)} name="resetpassword" value="ResetPassword"> Reset Password </button>
+            {isShown && (<ResetPassword/>)}
         </div>
     </form>
 

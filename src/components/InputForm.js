@@ -13,10 +13,6 @@ function InputForm( { Logout, Courses } ) {
         Courses(courses);
     }
 
-    const logoutHandler = e => {
-        e.preventDefault();
-        Logout();
-    }
 
     /*
     MOCK DATA FOR FORM
