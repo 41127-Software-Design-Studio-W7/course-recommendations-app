@@ -12,6 +12,7 @@ function App() {
   const [user, setUser] = useState({email: ""})
   const [error, setError] = useState("");
   const [courses, setCourses] = useState({courseNum: "", spec: "", studyYear: ""});
+  const [currentPage, setCurrentPage] = useState("login");
 
   const Login = details => {
     //console.log(details);
@@ -19,6 +20,7 @@ function App() {
     if (details.email == adminUser.email && details.password == adminUser.password) {
       //console.log("Logged in");
       setUser({email: details.email})
+      setCurrentPage("courses")
     } else {
       //console.log("Details do not match");
       setError("Details do not match")
@@ -28,6 +30,7 @@ function App() {
   const Logout = () => {
     console.log("Logout");
     setUser({email: ""});
+    setCurrentPage("login")
   }
 
   const Courses = courseDetails => {
@@ -38,11 +41,16 @@ function App() {
 
   return (
     <div className="App">
-      {(user.email != "") ? ( 
-        <InputForm Logout={Logout} Courses={Courses}/>
-        ) : (
-          <LoginForm Login={Login} error={error}/>
-        )}
+      {
+        (() => {
+        switch(currentPage)
+        {
+          case "login": 
+            return <LoginForm Login={Login} error={error} setCurrentPage={setCurrentPage}/>;
+          case "courses": 
+            return <InputForm Logout={Logout} Courses={Courses} setCurrentPage={setCurrentPage}/>;
+        }})()
+      }
     </div>
   );
 }

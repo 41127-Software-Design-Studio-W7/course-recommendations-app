@@ -3,7 +3,7 @@ import Ranking from "./Ranking/Ranking";
 import SearchField from "./SearchField/SearchField";
 
 
-function InputForm( { Logout, Courses } ) {
+function InputForm( { Logout, Courses, setCurrentPage } ) {
     const [courses, setCourses] = useState({courseNum: "", spec: "", studyYear: ""});
 
 
@@ -15,6 +15,7 @@ function InputForm( { Logout, Courses } ) {
 
     const logoutHandler = e => {
         e.preventDefault();
+        setCurrentPage("login");
         Logout();
     }
 
