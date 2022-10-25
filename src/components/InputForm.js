@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Ranking from "./Ranking/Ranking";
 import SearchField from "./SearchField/SearchField";
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 
 function InputForm( { Logout, Courses, setCurrentPage } ) {
@@ -102,7 +103,34 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
       */
       const assessment_areas = ["Hand In Assignments", "Presentations", "Online Quizzes", "Examinations"]
       
+      const handleOnSearch = (string, results) => {
+        // onSearch will have as the first callback parameter
+        // the string searched and for the second the results.
+        console.log(string, results)
+      }
+    
+      const handleOnHover = (result) => {
+        // the item hovered
+        console.log(result)
+      }
+    
+      const handleOnSelect = (item) => {
+        // the item selected
+        console.log(item)
+      }
+    
+      const handleOnFocus = () => {
+        console.log('Focused')
+      }
 
+      const formatResult = (item) => {
+        return (
+          <>
+            <span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span>
+            <span style={{ display: 'block', textAlign: 'left' }}>name: {item.name}</span>
+          </>
+        )
+      }      
 
   
     return (
@@ -120,8 +148,44 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 <input type="studyYear" name="studyYear" id="studyYear" onChange={e => setCourses({...courses, studyYear: e.target.value})} value={courses.studyYear} placeholder="Year of Study"/>
             </div> 
             <hr></hr>
-            <SearchField title="Completed Subjects" allpossiblesuggestions={possible_subs}/>
-            <SearchField title="Areas of Interest" allpossiblesuggestions={possible_areas}/>
+            <div style={{ width: 200, margin: 20 }}>
+            <div style={{ marginBottom: 20 }}>Completed Subjects: </div>
+            <ReactSearchAutocomplete
+              items={subjects_mock}
+              resultStringKeyName="name" // String to display in the results
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              showIcon={false}
+              styling={{
+                height: "34px",
+                borderRadius: "4px",
+                backgroundColor: "white",
+                boxShadow: "none",
+                hoverBackgroundColor: "lightgreen",
+                fontSize: "12px",
+              }}
+            />
+            <div style={{ marginTop: 20 }}>Choose Areas of Interest: </div>
+            <ReactSearchAutocomplete
+              items={areas_mock}
+              resultStringKeyName="name" // String to display in the results
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              showIcon={false}
+              styling={{
+                height: "34px",
+                borderRadius: "4px",
+                backgroundColor: "white",
+                boxShadow: "none",
+                hoverBackgroundColor: "lightgreen",
+                fontSize: "12px",
+              }}
+            />
+          </div>
             <Ranking title="Assessment Type" rankingitems={assessment_areas} />
             <hr></hr>
             <input  name="continue" type="submit" value="Continue"/>          
