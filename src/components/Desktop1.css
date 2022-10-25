@@ -9,7 +9,7 @@
 	overflow: auto;
 	background: rgba(255,255,255,1.00);
 }
-.Desktop1_Desktop1 .Group4 {
+.Desktop1_Desktop1 .Group1 {
 	position: absolute;
 	left: 534px;
 	top: 496px;
@@ -17,7 +17,7 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group4 .Rectangle1 {
+.Desktop1_Desktop1 .Group1 .Rectangle1 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -26,7 +26,7 @@
 	background: rgba(217,217,217,1.00);
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group4 .Subject {
+.Desktop1_Desktop1 .Group1 .Subject_0 {
 	position: absolute;
 	left: 97px;
 	top: 16px;
@@ -41,7 +41,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Group6 {
+.Desktop1_Desktop1 .Group2 {
 	position: absolute;
 	left: 536px;
 	top: 677px;
@@ -49,7 +49,7 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group6 .Rectangle15 {
+.Desktop1_Desktop1 .Group2 .Rectangle2 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -58,7 +58,7 @@
 	background: rgba(217,217,217,1.00);
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group6 .Subject_1 {
+.Desktop1_Desktop1 .Group2 .Subject_1 {
 	position: absolute;
 	left: 98px;
 	top: 16px;
@@ -73,7 +73,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Group5 {
+.Desktop1_Desktop1 .Group3 {
 	position: absolute;
 	left: 536px;
 	top: 584px;
@@ -81,7 +81,7 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group5 .Rectangle13 {
+.Desktop1_Desktop1 .Group3 .Rectangle3 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -90,7 +90,7 @@
 	background: rgba(217,217,217,1.00);
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group5 .Subject_2 {
+.Desktop1_Desktop1 .Group3 .Subject_2 {
 	position: absolute;
 	left: 96px;
 	top: 16px;
@@ -105,7 +105,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Group7 {
+.Desktop1_Desktop1 .Group4 {
 	position: absolute;
 	left: 536px;
 	top: 770px;
@@ -113,7 +113,7 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group7 .Rectangle14 {
+.Desktop1_Desktop1 .Group4 .Rectangle4 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -122,7 +122,7 @@
 	background: rgba(217,217,217,1.00);
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group7 .Subject_3 {
+.Desktop1_Desktop1 .Group4 .Subject_3 {
 	position: absolute;
 	left: 97px;
 	top: 16px;
@@ -137,7 +137,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Rectangle7 {
+.Desktop1_Desktop1 .Rectangle5 {
 	position: absolute;
 	left: 534px;
 	top: 67px;
@@ -163,7 +163,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Rectangle10 {
+.Desktop1_Desktop1 .Rectangle6 {
 	position: absolute;
 	left: 131px;
 	top: 67px;
@@ -189,7 +189,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Rectangle11 {
+.Desktop1_Desktop1 .Rectangle7 {
 	position: absolute;
 	left: 536px;
 	top: 898px;
@@ -215,7 +215,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Rectangle9 {
+.Desktop1_Desktop1 .Rectangle8 {
 	position: absolute;
 	left: 936px;
 	top: 67px;
@@ -241,7 +241,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Rectangle8 {
+.Desktop1_Desktop1 .Rectangle9 {
 	position: absolute;
 	left: 535px;
 	top: 149px;
@@ -275,7 +275,7 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group2 .Rectangle10_1 {
+.Desktop1_Desktop1 .Group5 .Rectangle10 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -286,7 +286,7 @@
 	border: 1px solid rgba(0,0,0,1);
 	box-sizing: border-box;
 }
-.Desktop1_Desktop1 .Group2 .YearofStudy_1 {
+.Desktop1_Desktop1 .Group5 .YearofStudy_1 {
 	position: absolute;
 	left: 32px;
 	top: 16px;
@@ -301,7 +301,7 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Group1 {
+.Desktop1_Desktop1 .Group6 {
 	position: absolute;
 	left: 133px;
 	top: 389px;
@@ -309,7 +309,7 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group1 .Rectangle11_1 {
+.Desktop1_Desktop1 .Group6 .Rectangle11 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -320,7 +320,7 @@
 	border: 1px solid rgba(0,0,0,1);
 	box-sizing: border-box;
 }
-.Desktop1_Desktop1 .Group1 .Year1ofStudy {
+.Desktop1_Desktop1 .Group6 .Year1ofStudy {
 	position: absolute;
 	left: 32px;
 	top: 16px;
@@ -335,15 +335,16 @@
 	font-weight: 400;
 	line-height: 37.5px;
 }
-.Desktop1_Desktop1 .Group3 {
+.Desktop1_Desktop1 .Group7 {
 	position: absolute;
 	left: 936px;
 	top: 389px;
 	width: 374px;
 	height: 70px;
 	border-radius: 10px;
+	
 }
-.Desktop1_Desktop1 .Group3 .Rectangle12 {
+.Desktop1_Desktop1 .Group7 .Rectangle12 {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -353,19 +354,4 @@
 	border-radius: 10px;
 	border: 1px solid rgba(0,0,0,1);
 	box-sizing: border-box;
-}
-.Desktop1_Desktop1 .Group3 .Year1ofStudy_1 {
-	position: absolute;
-	left: 32px;
-	top: 16px;
-	width: 306px;
-	height: 38px;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	color: rgba(0,0,0,1.00);
-	font-family: Antic;
-	font-size: 32px;
-	font-weight: 400;
-	line-height: 37.5px;
 }
