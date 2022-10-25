@@ -103,17 +103,15 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
       */
       const assessment_areas = ["Hand In Assignments", "Presentations", "Online Quizzes", "Examinations"]
       
-    
-      const subjects_selected = (item) => {
-        //TODO
-        //add subjects to list
-        console.log(item)
-      }
-      const areas_selected = (item) => {
-        //TODO
-        //add subjects to list
-        console.log(item)
-      }      
+      const user_input = []
+
+      const handleOnSelect = (item) => {
+        //TODO: RENDER ARRAY TO SCREEN
+        user_input.push(item)
+        console.log(user_input)
+        console.log(item);
+      };
+       
 
       const formatResult = (item) => {
         return (
@@ -141,11 +139,11 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
             </div> 
             <hr></hr>
             <div style={{ width: 300, margin: 20 }}>
-            <div style={{ marginBottom: 20 }}>Choose Completed Subjects: </div>
+            <div style={{ marginBottom: 20, fontWeight: 'bold' }}>Choose Completed Subjects: </div>
             <ReactSearchAutocomplete
               items={subjects_mock}
               resultStringKeyName="name" // String to display in the results
-              onSelect={subjects_selected}
+              onSelect={handleOnSelect}
               showIcon={false}
               styling={{
                 height: "34px",
@@ -157,11 +155,11 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 zIndex: 3,
               }}
             />
-            <div style={{ marginTop: 20 }}>Choose Areas of Interest: </div>
+            <div style={{ marginTop: 20, fontWeight: 'bold' }}>Choose Areas of Interest: </div>
             <ReactSearchAutocomplete
               items={areas_mock}
               resultStringKeyName="name" // String to display in the results
-              onSelect={areas_selected}
+              onSelect={handleOnSelect}
               showIcon={false}
               styling={{
                 height: "34px",
@@ -179,7 +177,6 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
             <input  name="continue" type="submit" value="Continue"/>          
             <button class='button' onClick={(Logout)} name="logout" type="button" value="Logout"> Logout </button>
         </div>
-        
     </form>
 
 
