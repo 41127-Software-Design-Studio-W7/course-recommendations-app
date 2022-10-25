@@ -125,7 +125,7 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
             <Ranking title="Assessment Type" rankingitems={assessment_areas} />
             <hr></hr>
             <input  name="continue" type="submit" value="Continue"/>          
-            <button class='button' onClick={(Logout)} name="logout" type="submit" value="Logout"> Logout </button>
+            <button class='button' onClick={(Logout)} name="logout" type="button" value="Logout"> Logout </button>
         </div>
         
     </form>
