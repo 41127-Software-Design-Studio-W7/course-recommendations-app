@@ -103,25 +103,17 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
       */
       const assessment_areas = ["Hand In Assignments", "Presentations", "Online Quizzes", "Examinations"]
       
-      const handleOnSearch = (string, results) => {
-        // onSearch will have as the first callback parameter
-        // the string searched and for the second the results.
-        console.log(string, results)
-      }
     
-      const handleOnHover = (result) => {
-        // the item hovered
-        console.log(result)
-      }
-    
-      const handleOnSelect = (item) => {
-        // the item selected
+      const subjects_selected = (item) => {
+        //TODO
+        //add subjects to list
         console.log(item)
       }
-    
-      const handleOnFocus = () => {
-        console.log('Focused')
-      }
+      const areas_selected = (item) => {
+        //TODO
+        //add subjects to list
+        console.log(item)
+      }      
 
       const formatResult = (item) => {
         return (
@@ -148,15 +140,12 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 <input type="studyYear" name="studyYear" id="studyYear" onChange={e => setCourses({...courses, studyYear: e.target.value})} value={courses.studyYear} placeholder="Year of Study"/>
             </div> 
             <hr></hr>
-            <div style={{ width: 200, margin: 20 }}>
-            <div style={{ marginBottom: 20 }}>Completed Subjects: </div>
+            <div style={{ width: 300, margin: 20 }}>
+            <div style={{ marginBottom: 20 }}>Choose Completed Subjects: </div>
             <ReactSearchAutocomplete
               items={subjects_mock}
               resultStringKeyName="name" // String to display in the results
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
+              onSelect={subjects_selected}
               showIcon={false}
               styling={{
                 height: "34px",
@@ -165,16 +154,14 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 boxShadow: "none",
                 hoverBackgroundColor: "lightgreen",
                 fontSize: "12px",
+                zIndex: 3,
               }}
             />
             <div style={{ marginTop: 20 }}>Choose Areas of Interest: </div>
             <ReactSearchAutocomplete
               items={areas_mock}
               resultStringKeyName="name" // String to display in the results
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
+              onSelect={areas_selected}
               showIcon={false}
               styling={{
                 height: "34px",
@@ -183,6 +170,7 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 boxShadow: "none",
                 hoverBackgroundColor: "lightgreen",
                 fontSize: "12px",
+                zIndex: 2,
               }}
             />
           </div>
