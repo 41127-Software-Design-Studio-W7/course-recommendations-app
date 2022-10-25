@@ -12,10 +12,10 @@ export default function RankingItem({key, title, updateRanking, index, max}) {
                 {index + 1}. {title}
             </div>
             <div >
-                <button className="minorbuttonup" onClick={() => updateRanking(index, (index - 1) >= 0 ? index - 1 : index)}>
+                <button type="button" className="minorbuttonup" onClick={() => updateRanking(index, (index - 1) >= 0 ? index - 1 : index)}>
                     /\
                 </button>
-                <button className="minorbuttondown" onClick={() => updateRanking(index, (index + 1) < max ? index + 1 : index)}>
+                <button type="button" className="minorbuttondown" onClick={() => updateRanking(index, (index + 1) < max ? index + 1 : index)}>
                     \/
                 </button>
             </div>

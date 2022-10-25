@@ -10,7 +10,6 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
     const submitHandler = e => {
         e.preventDefault();
 
-        Courses(courses);
     }
 
     const logoutHandler = e => {
@@ -55,27 +54,27 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
           "area": "Software Engineering"      
         },
         {
-          "id": 10030,
+          "id": 30040,
           "name": "Machine Learning Fundamentals",
           "area": "Data Science"      
         },
         {
-          "id" : 10031,
+          "id" : 30041,
           "name": "Machine Learning Intermediate",
           "area": "Data Science"      
         },
         {
-          "id": 10030,
+          "id": 20050,
           "name": "Embedded Systems Fundamentals",
           "area": "Electrical Engineering"      
         },
         {
-          "id" : 10031,
+          "id" : 20051,
           "name": "Embedded Systems Intermediate",
           "area": "Electrical Engineering"      
         },
       ]
-      const possible_subs = [10000, 10001, 10020, 10021, 10030, 10031]
+      const possible_subs = [10000, 10001, 10020, 10021, 10030, 10031, 30040, 30041, 20050, 20051]
       
       /*
       Mock data
