@@ -1,0 +1,371 @@
+
+.Desktop1_Desktop1 {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	margin: auto;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	background: rgba(255,255,255,1.00);
+}
+.Desktop1_Desktop1 .Group4 {
+	position: absolute;
+	left: 534px;
+	top: 496px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group4 .Rectangle1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group4 .Subject {
+	position: absolute;
+	left: 97px;
+	top: 16px;
+	width: 178.4312744140625px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Group6 {
+	position: absolute;
+	left: 536px;
+	top: 677px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group6 .Rectangle15 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group6 .Subject_1 {
+	position: absolute;
+	left: 98px;
+	top: 16px;
+	width: 178.4312744140625px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Group5 {
+	position: absolute;
+	left: 536px;
+	top: 584px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group5 .Rectangle13 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group5 .Subject_2 {
+	position: absolute;
+	left: 96px;
+	top: 16px;
+	width: 178.4312744140625px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Group7 {
+	position: absolute;
+	left: 536px;
+	top: 770px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group7 .Rectangle14 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group7 .Subject_3 {
+	position: absolute;
+	left: 97px;
+	top: 16px;
+	width: 178.4312744140625px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Rectangle7 {
+	position: absolute;
+	left: 534px;
+	top: 67px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Course {
+	position: absolute;
+	left: 665px;
+	top: 83px;
+	width: 109px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Rectangle10 {
+	position: absolute;
+	left: 131px;
+	top: 67px;
+	width: 374px;
+	height: 70px;
+	background: rgba(180,228,255,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Back {
+	position: absolute;
+	left: 262px;
+	top: 83px;
+	width: 109px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Rectangle11 {
+	position: absolute;
+	left: 536px;
+	top: 898px;
+	width: 374px;
+	height: 70px;
+	background: rgba(173,253,186,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .LogOut {
+	position: absolute;
+	left: 667px;
+	top: 914px;
+	width: 109px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Rectangle9 {
+	position: absolute;
+	left: 936px;
+	top: 67px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Specialization {
+	position: absolute;
+	left: 1001px;
+	top: 83px;
+	width: 243px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Rectangle8 {
+	position: absolute;
+	left: 535px;
+	top: 149px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .YearofStudy {
+	position: absolute;
+	left: 600px;
+	top: 165px;
+	width: 245px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Group2 {
+	position: absolute;
+	left: 535px;
+	top: 389px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group2 .Rectangle10_1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(217,217,217,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Group2 .YearofStudy_1 {
+	position: absolute;
+	left: 32px;
+	top: 16px;
+	width: 306px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Group1 {
+	position: absolute;
+	left: 133px;
+	top: 389px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group1 .Rectangle11_1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(255,222,172,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Group1 .Year1ofStudy {
+	position: absolute;
+	left: 32px;
+	top: 16px;
+	width: 306px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.Desktop1_Desktop1 .Group3 {
+	position: absolute;
+	left: 936px;
+	top: 389px;
+	width: 374px;
+	height: 70px;
+	border-radius: 10px;
+}
+.Desktop1_Desktop1 .Group3 .Rectangle12 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 374px;
+	height: 70px;
+	background: rgba(219,191,255,1.00);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,1);
+	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Group3 .Year1ofStudy_1 {
+	position: absolute;
+	left: 32px;
+	top: 16px;
+	width: 306px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
+}
