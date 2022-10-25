@@ -61,8 +61,8 @@ export default function SearchField(props) {
                 props
                 .allpossiblesuggestions
                 .filter((sug) => {
-                const subString = searchTerm.toString();
-                const fullName = sug.toString();
+                const subString = searchTerm.toString().toLowerCase();
+                const fullName = sug.toString().toLowerCase();
 
                 return (
                     //fullName
