@@ -52,7 +52,7 @@
 .Desktop1_Desktop1 .Group2 .Rectangle2 {
 	position: absolute;
 	left: 0px;
-	top: 0px;
+	top: 290px;
 	width: 374px;
 	height: 70px;
 	background: rgba(217,217,217,1.00);
@@ -61,7 +61,7 @@
 .Desktop1_Desktop1 .Group2 .Subject_1 {
 	position: absolute;
 	left: 98px;
-	top: 16px;
+	top: 306px;
 	width: 178.4312744140625px;
 	height: 38px;
 	display: flex;
@@ -275,10 +275,10 @@
 	height: 70px;
 	border-radius: 10px;
 }
-.Desktop1_Desktop1 .Group5 .Rectangle10 {
+.Desktop1_Desktop1 .Group5  .Rectangle10 {
 	position: absolute;
-	left: 0px;
-	top: 0px;
+	left: 535px;
+	top: 389px;
 	width: 374px;
 	height: 70px;
 	background: rgba(217,217,217,1.00);
@@ -288,8 +288,8 @@
 }
 .Desktop1_Desktop1 .Group5 .YearofStudy_1 {
 	position: absolute;
-	left: 32px;
-	top: 16px;
+	left: 567px;
+	top: 405px;
 	width: 306px;
 	height: 38px;
 	display: flex;
@@ -319,6 +319,21 @@
 	border-radius: 10px;
 	border: 1px solid rgba(0,0,0,1);
 	box-sizing: border-box;
+}
+.Desktop1_Desktop1 .Group7 .Year1ofStudy {
+	position: absolute;
+	left: 32px;
+	top: 16px;
+	width: 306px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgba(0,0,0,1.00);
+	font-family: Antic;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37.5px;
 }
 .Desktop1_Desktop1 .Group6 .Year1ofStudy {
 	position: absolute;
