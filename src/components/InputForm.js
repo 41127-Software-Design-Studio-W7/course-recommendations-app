@@ -9,6 +9,7 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
 
 
     const submitHandler = e => {
+      setCurrentPage("recommendations")
         e.preventDefault();
 
     }

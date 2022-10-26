@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LoginForm from './components/LoginForm';
 import InputForm from './components/InputForm';
-
+import Desktop1 from './components/Desktop1'
 
 function App() {
   const adminUser = {
@@ -49,6 +49,7 @@ function App() {
             return <LoginForm Login={Login} error={error} setCurrentPage={setCurrentPage}/>;
           case "courses": 
             return <InputForm Logout={Logout} Courses={Courses} setCurrentPage={setCurrentPage}/>;
+          case "recommendations": return <Desktop1/>
         }})()
       }
     </div>
