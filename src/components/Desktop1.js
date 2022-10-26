@@ -1,6 +1,12 @@
 import React from 'react'
 import './Desktop1.css'
-export default function Desktop1 () {
+export default function Desktop1 ({setCurrentPage, Logout}) {
+	
+	const backHandler = e => {
+		setCurrentPage("courses");
+		e.preventDetault();
+	}
+
 	return (
 		<div className='Desktop1_Desktop1'>
 			<div className='Group1'>
@@ -22,9 +28,9 @@ export default function Desktop1 () {
 			<div className='Rectangle5'/>
 			<span className='Course'>Course</span>
 			<div className='Rectangle6'/>
-			<span className='Back'>Back</span>
+			<span className='Back' onClick={backHandler}>Back</span>
 			<div className='Rectangle7'/>
-			<span className='LogOut'>Log Out</span>
+			<span className='LogOut'onClick={Logout}>Log Out</span>
 			<div className='Rectangle8'/>
 			<span className='Specialization'>Specialization</span>
 			<div className='Rectangle9'/>
