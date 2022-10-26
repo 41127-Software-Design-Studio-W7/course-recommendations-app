@@ -49,7 +49,7 @@ function App() {
             return <LoginForm Login={Login} error={error} setCurrentPage={setCurrentPage}/>;
           case "courses": 
             return <InputForm Logout={Logout} Courses={Courses} setCurrentPage={setCurrentPage}/>;
-          case "recommendations": return <Desktop1/>
+          case "recommendations": return <Desktop1 setCurrentPage={setCurrentPage} Logout={Logout}/>
         }})()
       }
     </div>
