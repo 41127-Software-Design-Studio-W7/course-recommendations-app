@@ -5,7 +5,7 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 
 function InputForm( { Logout, Courses, setCurrentPage } ) {
-    const [courses, setCourses] = useState({courseNum: "", spec: "", studyYear: "", completedSubjects:[], areasOfInterest:[]});
+    const [courses, setCourses] = useState({courseNum: "", spec: "", studyYear: "", completedSubjects:[], areasOfInterest:[], assessmentPreferenceRankings:[]});
 
 
     const submitHandler = e => {
@@ -128,49 +128,36 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
         
       ]
       const possible_courses = ["Software Engineering", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering"]
-      
-
-      
-      const user_input = []
-
-      const handleOnSelect = (item) => {
-        //TODO: RENDER ARRAY TO SCREEN
-        //user_input.push(item)
-        console.log(user_input)
-        console.log(item);
-        setCourses({...courses, courseNum: item});
-        console.log(courses);
-        //e => setCourses({...courses, courseNum: e.target.value})
-      };
+    
 
       const handleOnSelectCourse = (item) => {
-        //TODO: RENDER ARRAY TO SCREEN
-        //user_input.push(item)
-        //console.log(user_input)
-        //console.log(item);
         setCourses({...courses, courseNum: item});
         console.log(courses);
-        //e => setCourses({...courses, courseNum: e.target.value})
       };
 
       const handleOnSelectSpecialisation = (item) => {
-        //TODO: RENDER ARRAY TO SCREEN
-        //user_input.push(item)
-        //console.log(user_input)
-        //console.log(item);
         setCourses({...courses, spec: item});
         console.log(courses);
-        //e => setCourses({...courses, courseNum: e.target.value})
       };
        
       const handleOnSelectYear = (item) => {
-        //TODO: RENDER ARRAY TO SCREEN
-        //user_input.push(item)
-        //console.log(user_input)
-        //console.log(item);
         setCourses({...courses, studyYear: item});
         console.log(courses);
-        //e => setCourses({...courses, courseNum: e.target.value})
+      };
+
+      const handleOnUpdateCompleted = (item) => {
+        setCourses({...courses, completedSubjects: item});
+        console.log(courses);
+      };
+
+      const handleOnUpdateAreas = (item) => {
+        setCourses({...courses, areasOfInterest: item});
+        console.log(courses);
+      };
+
+      const handleOnUpdateAssessmentPrefenceRankings = (item) => {
+        setCourses({...courses, assessmentPreferenceRankings: item});
+        console.log(courses);
       };
 
       const formatResult = (item) => {
@@ -193,8 +180,9 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
             <h2>Course Recommendation Input</h2>
             <hr></hr>
             <div className="form-group">
-                <input type="courseNum" name="courseNum" id="courseNum" onChange={e => setCourses({...courses, courseNum: e.target.value})} value={courses.courseNum} placeholder="Course Number"/>
-                <hr></hr>
+                <div className="formitemheading">
+                  Choose Course:
+                </div>
                 <ReactSearchAutocomplete
                   items={courses_mock}
                   resultStringKeyName="name" // String to display in the results
@@ -212,8 +200,9 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 />
             </div>
             <div className="form-group">
-                <input type="spec" name="spec" id="spec" onChange={e => setCourses({...courses, spec: e.target.value})} value={courses.spec} placeholder="Specialisation"/>
-                <hr></hr>
+                <div className="formitemheading">
+                    Choose Specialisation:
+                </div>
                 <ReactSearchAutocomplete
                   items={areas_mock}
                   resultStringKeyName="name" // String to display in the results
@@ -231,18 +220,18 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 />
             </div>    
             <div className="form-group">
+                <div className="formitemheading">
+                    Enter Study Year:
+                </div>
                 <input type="studyYear" name="studyYear" id="studyYear" onChange={e => setCourses({...courses, studyYear: e.target.value})} value={courses.studyYear} placeholder="Year of Study"/>
             </div> 
             <hr></hr>
             <div style={{ width: 300, margin: 20 }}>
-            <div style={{ marginBottom: 20, fontWeight: 'bold' }}>Choose Completed Subjects: </div>
-
-            <SearchField title="Completed Subjects" allpossiblesuggestions={possible_subs}/>
-            <SearchField title="Areas of Interest" allpossiblesuggestions={possible_areas}/>
-
-          
-          </div>
-            <Ranking title="Assessment Type" rankingitems={assessment_areas} />
+              
+            </div>
+            <SearchField title="Completed Subjects" allpossiblesuggestions={possible_subs} onUpdateValues={handleOnUpdateCompleted}/>
+            <SearchField title="Areas of Interest" allpossiblesuggestions={possible_areas} onUpdateValues = {handleOnUpdateAreas}/>
+            <Ranking title="Assessment Type" rankingitems={assessment_areas} updateSelected={handleOnUpdateAssessmentPrefenceRankings}/>
             <hr></hr>
             <input  name="continue" type="submit" value="Continue"/>          
             <button class='button' onClick={(Logout)} name="logout" type="button" value="Logout"> Logout </button>

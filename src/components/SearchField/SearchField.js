@@ -4,10 +4,17 @@ import { useState, useEffect } from "react";
 import Selected from "./Selected";
 import Suggestion from "./Suggestion";
 
-export default function SearchField(props) {
+export default function SearchField({title, allpossiblesuggestions, onUpdateValues}) {
 
     const [searchTerm, setsearchTerm] = useState("");
     const [selected, setSelected] = useState([]);
+
+    const wrapSetSelected = (val) => {
+        let newSelected = selected.slice();
+        newSelected.push(val); //parseInt(val));
+        setSelected(newSelected);
+        onUpdateValues(newSelected);
+    }
 
     const onChange = (e) => {
         setsearchTerm(e.target.value);
@@ -19,6 +26,7 @@ export default function SearchField(props) {
         let newSelected = selected.slice();
         newSelected.push(val); //parseInt(val));
         setSelected(newSelected);
+        onUpdateValues(newSelected);
         console.log(selected);
     }
 
@@ -29,6 +37,7 @@ export default function SearchField(props) {
         const newSelected = [...selected];
         newSelected.splice(index, 1);
         setSelected(newSelected);
+        onUpdateValues(newSelected);
         console.log(selected);
     }
 
@@ -36,7 +45,7 @@ export default function SearchField(props) {
     return (
         <div className="SearchField"> 
             <div className="formitemheading">
-                Choose {props.title}:
+                Choose {title}:
             </div>
             <div>
                 <div className="formitemdescription">
@@ -58,8 +67,7 @@ export default function SearchField(props) {
             </div>
             <div className="Suggestions">
             {
-                props
-                .allpossiblesuggestions
+                allpossiblesuggestions
                 .filter((sug) => {
                 const subString = searchTerm.toString().toLowerCase();
                 const fullName = sug.toString().toLowerCase();

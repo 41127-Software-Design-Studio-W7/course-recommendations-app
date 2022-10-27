@@ -8,10 +8,6 @@ export default function Ranking({key, rankingitems, title, updateSelected}) {
 
     const [rankings, setRankings] = useState(rankingitems);
 
-    const onChange = (e) => {
-    //    setsearchTerm(e.target.value);
-    }
-
     const onClickRankingItemButton = (curIndex, nextIndex) => {
         console.log("Changing rankings at index " + curIndex + " " + nextIndex);
         console.log(rankings);
@@ -23,6 +19,7 @@ export default function Ranking({key, rankingitems, title, updateSelected}) {
             newRankings[nextIndex] = temp;
         }
         setRankings(newRankings);
+        updateSelected(newRankings);
         console.log(rankings);
     }
 
