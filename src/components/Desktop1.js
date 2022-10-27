@@ -92,9 +92,9 @@ export default function Desktop1 ({setCurrentPage, Logout}) {
 			</div>
 			<div className='Rectangle5'/>
 			<span className='Course'>Course</span>
-			<div className='Rectangle6'/>
+			<div className='Rectangle6' onClick={backHandler}/>
 			<span className='Back' onClick={backHandler}>Back</span>
-			<div className='Rectangle7'/>
+			<div className='Rectangle7' onClick={Logout}/>
 			<span className='LogOut'onClick={Logout}>Log Out</span>
 			<div className='Rectangle8'/>
 			<span className='Specialization'>Specialization</span>
