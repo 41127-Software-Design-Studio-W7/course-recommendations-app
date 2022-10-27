@@ -5,7 +5,7 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 
 function InputForm( { Logout, Courses, setCurrentPage } ) {
-    const [courses, setCourses] = useState({courseNum: "", spec: "", studyYear: ""});
+    const [courses, setCourses] = useState({courseNum: "", spec: "", studyYear: "", completedSubjects:[], areasOfInterest:[]});
 
 
     const submitHandler = e => {
@@ -104,15 +104,74 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
       */
       const assessment_areas = ["Hand In Assignments", "Presentations", "Online Quizzes", "Examinations"]
       
+
+      /*
+      Mock Data
+      */
+      const courses_mock = [
+        { 
+          "id": 100,
+          "name": "Software Engineering"
+        },
+        {
+          "id" : 200,
+          "name": "Electrical Engineering"      
+        },
+        {
+          "id": 300,
+          "name": "Mechanical Engineering", 
+        },
+        {
+          "id": 400,
+          "name": "Civil Engineering", 
+        },
+        
+      ]
+      const possible_courses = ["Software Engineering", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering"]
+      
+
+      
       const user_input = []
 
       const handleOnSelect = (item) => {
         //TODO: RENDER ARRAY TO SCREEN
-        user_input.push(item)
+        //user_input.push(item)
         console.log(user_input)
         console.log(item);
+        setCourses({...courses, courseNum: item});
+        console.log(courses);
+        //e => setCourses({...courses, courseNum: e.target.value})
+      };
+
+      const handleOnSelectCourse = (item) => {
+        //TODO: RENDER ARRAY TO SCREEN
+        //user_input.push(item)
+        //console.log(user_input)
+        //console.log(item);
+        setCourses({...courses, courseNum: item});
+        console.log(courses);
+        //e => setCourses({...courses, courseNum: e.target.value})
+      };
+
+      const handleOnSelectSpecialisation = (item) => {
+        //TODO: RENDER ARRAY TO SCREEN
+        //user_input.push(item)
+        //console.log(user_input)
+        //console.log(item);
+        setCourses({...courses, spec: item});
+        console.log(courses);
+        //e => setCourses({...courses, courseNum: e.target.value})
       };
        
+      const handleOnSelectYear = (item) => {
+        //TODO: RENDER ARRAY TO SCREEN
+        //user_input.push(item)
+        //console.log(user_input)
+        //console.log(item);
+        setCourses({...courses, studyYear: item});
+        console.log(courses);
+        //e => setCourses({...courses, courseNum: e.target.value})
+      };
 
       const formatResult = (item) => {
         return (
@@ -127,13 +186,49 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
     return (
     <form onSubmit={submitHandler}>
         <div>
+
+        
+            
+
             <h2>Course Recommendation Input</h2>
             <hr></hr>
             <div className="form-group">
                 <input type="courseNum" name="courseNum" id="courseNum" onChange={e => setCourses({...courses, courseNum: e.target.value})} value={courses.courseNum} placeholder="Course Number"/>
+                <hr></hr>
+                <ReactSearchAutocomplete
+                  items={courses_mock}
+                  resultStringKeyName="name" // String to display in the results
+                  onSelect={handleOnSelectCourse}
+                  showIcon={false}
+                  styling={{
+                    height: "34px",
+                    borderRadius: "4px",
+                    backgroundColor: "white",
+                    boxShadow: "none",
+                    hoverBackgroundColor: "lightgreen",
+                    fontSize: "12px",
+                    zIndex: 3,
+                  }}
+                />
             </div>
             <div className="form-group">
                 <input type="spec" name="spec" id="spec" onChange={e => setCourses({...courses, spec: e.target.value})} value={courses.spec} placeholder="Specialisation"/>
+                <hr></hr>
+                <ReactSearchAutocomplete
+                  items={areas_mock}
+                  resultStringKeyName="name" // String to display in the results
+                  onSelect={handleOnSelectSpecialisation}
+                  showIcon={false}
+                  styling={{
+                    height: "34px",
+                    borderRadius: "4px",
+                    backgroundColor: "white",
+                    boxShadow: "none",
+                    hoverBackgroundColor: "lightgreen",
+                    fontSize: "12px",
+                    zIndex: 3,
+                  }}
+                />
             </div>    
             <div className="form-group">
                 <input type="studyYear" name="studyYear" id="studyYear" onChange={e => setCourses({...courses, studyYear: e.target.value})} value={courses.studyYear} placeholder="Year of Study"/>
@@ -141,37 +236,11 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
             <hr></hr>
             <div style={{ width: 300, margin: 20 }}>
             <div style={{ marginBottom: 20, fontWeight: 'bold' }}>Choose Completed Subjects: </div>
-            <ReactSearchAutocomplete
-              items={subjects_mock}
-              resultStringKeyName="name" // String to display in the results
-              onSelect={handleOnSelect}
-              showIcon={false}
-              styling={{
-                height: "34px",
-                borderRadius: "4px",
-                backgroundColor: "white",
-                boxShadow: "none",
-                hoverBackgroundColor: "lightgreen",
-                fontSize: "12px",
-                zIndex: 3,
-              }}
-            />
-            <div style={{ marginTop: 20, fontWeight: 'bold' }}>Choose Areas of Interest: </div>
-            <ReactSearchAutocomplete
-              items={areas_mock}
-              resultStringKeyName="name" // String to display in the results
-              onSelect={handleOnSelect}
-              showIcon={false}
-              styling={{
-                height: "34px",
-                borderRadius: "4px",
-                backgroundColor: "white",
-                boxShadow: "none",
-                hoverBackgroundColor: "lightgreen",
-                fontSize: "12px",
-                zIndex: 2,
-              }}
-            />
+
+            <SearchField title="Completed Subjects" allpossiblesuggestions={possible_subs}/>
+            <SearchField title="Areas of Interest" allpossiblesuggestions={possible_areas}/>
+
+          
           </div>
             <Ranking title="Assessment Type" rankingitems={assessment_areas} />
             <hr></hr>

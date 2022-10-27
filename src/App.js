@@ -4,10 +4,17 @@ import InputForm from './components/InputForm';
 import Desktop1 from './components/Desktop1'
 
 function App() {
+
+  /*
+  User Data
+  */
   const adminUser = {
     email:"admin@admin.com",
     password: "admin"
   }
+
+  
+
 
   const [user, setUser] = useState({email: ""})
   const [error, setError] = useState("");
