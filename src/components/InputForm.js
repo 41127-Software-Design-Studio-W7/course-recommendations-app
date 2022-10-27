@@ -226,9 +226,7 @@ function InputForm( { Logout, Courses, setCurrentPage } ) {
                 <input type="studyYear" name="studyYear" id="studyYear" onChange={e => setCourses({...courses, studyYear: e.target.value})} value={courses.studyYear} placeholder="Year of Study"/>
             </div> 
             <hr></hr>
-            <div style={{ width: 300, margin: 20 }}>
-              
-            </div>
+
             <SearchField title="Completed Subjects" allpossiblesuggestions={possible_subs} onUpdateValues={handleOnUpdateCompleted}/>
             <SearchField title="Areas of Interest" allpossiblesuggestions={possible_areas} onUpdateValues = {handleOnUpdateAreas}/>
             <Ranking title="Assessment Type" rankingitems={assessment_areas} updateSelected={handleOnUpdateAssessmentPrefenceRankings}/>
